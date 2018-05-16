@@ -4,11 +4,6 @@ import Init
 
 baseURL = 'https://canvas.instructure.com/api/v1/courses/'
 
-#temporary token location
-#ADD ACCESS TOKEN HERE
-#token = '11224~lPq1fMCZsKNULyVV8g7dWF3Lxgd69EbgzKll7MrXFk9GjXTLGtdmb7pKUbXIhNkm'
-#token = '11224~C9j2yQgxGhMg6SRzuitI49kW6WsoFVeSUuogqqRjpvf37YH8O6uF0Ifc1xRDqL36'
-#tokenString = '?access_token='+token
 def testToken(token):
     accounts = requests.get('https://canvas.instructure.com/api/v1/course_accounts',
                             params={'access_token': token})

@@ -103,9 +103,9 @@ def getAllModules():
             module_set.append(module)
     return module_set
 
-def setHome():
+def setHome(homePage):
     home = requests.put(baseURL+Init.Course_ID,
-                        params={'access_token': Init.Access_Token, 'course[default_view]':'syllabus'})
+                        params={'access_token': Init.Access_Token, 'course[default_view]':homePage})
     return home.json()
 
 def startLinkValidation():

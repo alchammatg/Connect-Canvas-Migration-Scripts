@@ -1,5 +1,3 @@
-from Modulate import MasterModulate
-from Uniquify_Titles import MasterUniquifyTitles
 import API_Calls as API
 import Init
 from bs4 import BeautifulSoup
@@ -318,9 +316,6 @@ def runCleaningSequence(page):
 
 #Gets all pages in a course. Sends all non-empty pages to the runCleaningSequence for individual processing.
 def MasterClean():
-    MasterModulate()
-    MasterUniquifyTitles()
-
     #API.getAllPages returns an array of all pages found in a course. The list does NOT include page bodies, those must be fetched using the API.getPage function with the desired page's url as a parameter.
     pages_list = API.getAllPages()
     #Only run the next bit if at-least one page is found in the pages_list array.

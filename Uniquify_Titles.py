@@ -22,8 +22,6 @@ def getCoreNames(names, ugly_names):
 
 
 def MasterUniquifyTitles():
-    Init.q.put(["task_description","Uniquifying Titles"])
-
     names = []
     ugly_names = []
     pages = API.getAllPages()
@@ -56,5 +54,4 @@ def MasterUniquifyTitles():
                         #get page url  and change page title not item title
         print("Finished all modules")
 
-    Init.q.put(["finished", True])
     return

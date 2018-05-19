@@ -1,5 +1,5 @@
 #Make all module items: external link open in new tab
-def openLinksInNewTabs():
+def MasterOpenLinksInNewTabs():
     modules = API.getAllModules()
     import requests
     for module in modules:
@@ -9,7 +9,7 @@ def openLinksInNewTabs():
                 requests.put('https://canvas.instructure.com/api/v1/courses/{}/modules/{}/items/{}'.format(Init.Course_ID,module['id'],moduleItem['id']), params = {'access_token': Init.Access_Token, 'module_item[new_tab]': True})
                 print(moduleItem['title'])
                 
-def deleteUnpublishedPages():
+def MasterDeleteUnpublishedPages():
     unpublished_pages = API.getAllUnpublishedPages()
     for unpublished_page in unpublished_pages:
         print(unpublished_page['title'])

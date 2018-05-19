@@ -16,5 +16,17 @@ Before you can interact with the Canvas API, your access token needs to be store
 
 Using the library *requests*, API calls are made to the Canvas API through a collection of small functions in this file.
 
-
+****************************************************************************************************************************
 ***All the remaining files except Services.py contain one Master function which I have imported directly into Main.py. Services.py contains four Master functions, which you can call in Main by entering Services.{FunctionName}***
+
+### Login.py
+
+Prompts the user to enter their Canvas API Access Token and performs a basic varification by testing an API call with the token for errors, then stores the token in the variable Init.Access_Token.
+
+### Enter_Course.py
+### Files_To_Pages.py
+### Clean_Pages.py
+### Fix_Internal_Links.py
+### Modulate.py
+### Uniquify_Titles.py
+### Services.py

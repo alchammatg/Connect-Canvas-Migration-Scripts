@@ -51,18 +51,10 @@ Looks through the entire modules page for instances where Canvas has automatical
 
 Contains four master functions.
 
-**MasterUMC()**
+**MasterUMC()** - Searches all modules for items with duplicate names. If any duplicates are detected, only the first instance is kept and the following ones are deleted from the module.
 
-Searches all modules for items with duplicate names. If any duplicates are detected, only the first instance is kept and the following ones are deleted from the module.
+**MasterRAP()** - Restores all wiki pages to their 1st version.
 
-**MasterRAP()**
+**MasterDeleteUnpublishedPages()** - Deletes all unpublished wiki pages.
 
-Restores all wiki pages to their 1st version.
-
-**MasterDeleteUnpublishedPages()**
-
-Deletes all unpublished wiki pages.
-
-**MasterOpenLinksInNewTabs()**
-
-Makes all external link attatchment module items open in new tabs.
+**MasterOpenLinksInNewTabs()** - Makes all external link attatchment module items open in new tabs.

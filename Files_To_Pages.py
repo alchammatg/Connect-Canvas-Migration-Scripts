@@ -1,7 +1,6 @@
 import API_Calls as API
 import urllib.request as req
 from bs4 import BeautifulSoup
-from Fix_Internal_Links import fixInternalLinks
 import Init
 
 pageUrlHtmlList = []
@@ -16,13 +15,10 @@ created_pages = []
 
 
 def deleteAllHTMLFiles():
-    Init.q.put(["task_description","Deleting HTML"])
     all_html_files = API.getAllFiles('text/html')
-    Init.q.put(["total",len(all_html_files)])
 
     deleted_file_count =0
     for file in all_html_files:
-        Init.q.put(["current", deleted_file_count])
         API.deleteFile(file['id'])
         deleted_file_count += 1
     print("[deleteAllHTMLFiles] {} files were deleted".format(deleted_file_count))
@@ -81,7 +77,6 @@ def reversionModule(module_ID):
         module_items_count = len(module_items)
         for n in range(module_items_count):
             processed_item_count += 1
-            Init.q.put(["current", processed_item_count])
 
             if module_items[n]['type'] == 'File':
                 file = API.getFile(module_items[n]['content_id'])
@@ -123,5 +118,4 @@ def traverseCourseFTP():
 def MasterFTP():
     traverseCourseFTP()
     deleteAllHTMLFiles()
-    fixInternalLinks()
     return

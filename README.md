@@ -2,7 +2,7 @@
 
 Language: Python and CanvasAPI
 
-Author: Ghazi Alchammat - alchammatg@gmail.com
+Developer: Ghazi Alchammat - alchammatg@gmail.com
 
 ### Introduction:
 

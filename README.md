@@ -4,6 +4,8 @@ Language: Python and CanvasAPI
 
 Author: Ghazi Alchammat - alchammatg@gmail.com
 
+
+
 This repository contains a collection of Python scripts that leverage the Canvas API to automate multiple elements of the Connect to Canvas course migration process. The main way to operate the scripts is by editing and launching the file Main.py. All API calls are made through the API_Calls file which is imported to other files and used by the name API. For example, when you call tokenLogin() from Main.py, tokenLogin() calls API.testToken() which it has access to by importing the API_Calls module with the overwritten name API.
 
 
